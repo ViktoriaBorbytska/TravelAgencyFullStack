@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Let's Go Travel!</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Travel Agency Web Application">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="styles/normalize.css">
+    <link rel="stylesheet" type="text/css" href="plugins/bootstrap4/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/main_styles.css">
+    <link rel="stylesheet" type="text/css" href="styles/responsive.css">
+</head>
+<body>
+<div class="super-container">
+    <!--Header-->
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="header-container row">
+                        <div class="logo-container col-md-4">
+                            <div class="logo">
+                                <div>Carpe Diem</div>
+                                <div>travel agency</div>
+                                <div class="logo-img">
+                                    <img alt="logo" src="images/logo.png">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="user-access d-flex">
+                                <div class="login ml-auto">
+                                    <a href="login.html">
+                                        <span class="fa fa-user"></span> Log in
+                                    </a>
+                                </div>
+                                <div class="user-profile ml-auto">
+                                    <a href="profile.html">
+                                        <span class="fa fa-user"></span> Profile
+                                    </a>
+                                </div>
+                                <div class="cart">
+                                    <a href="cart.html">
+                                        <span class="fa fa-shopping-cart"></span> Cart
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="main-nav-container d-flex align-items-center justify-content-start">
+                                <nav class="main-nav ml-auto">
+                                    <ul class="main-nav-list">
+                                        <li class="main-nav-item active"><a href="#">Home</a></li>
+                                        <li class="main-nav-item"><a href="about.html">About us</a></li>
+                                        <li class="main-nav-item"><a href="offers.html">Offers</a></li>
+                                        <li class="main-nav-item"><a href="news.html">News</a></li>
+                                        <li class="main-nav-item"><a href="contacts.html">Contact</a></li>
+                                        <li class="main-nav-item"><a href="review.html">Reviews</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="hamburger d-flex align-items-center"><span class="fa fa-bars ml-auto"
+                                                                                   aria-hidden="true"></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Menu -->
+    <section class="menu-container menu-mm">
+        <div class="menu-close-container">
+            <div class="menu-close"></div>
+        </div>
+        <div class="menu-inner menu-mm">
+            <div class="menu menu-mm">
+                <div class="menu-user-access-container menu-mm">
+                    <ul class="menu-user-access menu-mm">
+                        <li class="menu-user-access-item menu-mm"><a href="#"><span class="fa fa-user"
+                                                                                    aria-hidden="true"></span> Log
+                            In</a></li>
+                        <li class="menu-user-access-item menu-mm"><a href="#"><span class="fa fa-user"
+                                                                                    aria-hidden="true"></span>
+                            Profile</a></li>
+                        <li class="menu-user-access-item menu-mm"><a href="#"><span class="fa fa-shopping-cart"
+                                                                                    aria-hidden="true"></span> Cart</a>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="menu-list menu-mm">
+                    <li class="main-menu-item menu-mm active"><a href="#">Home</a></li>
+                    <li class="main-menu-item menu-mm"><a href="about.html">About us</a></li>
+                    <li class="main-menu-item menu-mm"><a href="offers.html">Offers</a></li>
+                    <li class="main-menu-item menu-mm"><a href="news.html">News</a></li>
+                    <li class="main-menu-item menu-mm"><a href="contacts.html">Contact</a></li>
+                    <li class="main-menu-item menu-mm"><a href="review.html">Reviews</a></li>
+                </ul>
+                <div class="menu-social-container menu-mm">
+                    <ul class="menu-social menu-mm">
+                        <li class="menu-social-item menu-mm"><a href="#"><span class="fa fa-instagram"
+                                                                               aria-hidden="true"></span></a></li>
+                        <li class="menu-social-item menu-mm"><a href="#"><span class="fa fa-facebook"
+                                                                               aria-hidden="true"></span></a></li>
+                        <li class="menu-social-item menu-mm"><a href="#"><span class="fa fa-twitter"
+                                                                               aria-hidden="true"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Home block-->
+    <section class="home">
+        <div class="home-content">
+            <div class="home-text-background">Explore</div>
+            <div class="home-text-foreground">Broaden your horizons</div>
+        </div>
+    </section>
+    <!--Search block-->
+    <section class="search parallax-background" data-parallax="scroll"
+             data-image-src="images/search.png" data-speed="0.6">
+        <div class="overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h3 class="container-top-title">Find the adventure of a lifetime</h3>
+                        <div class="search-form-container">
+                            <form action="#"
+                                  class="search-form d-flex flex-md-row flex-column align-items-md-center align-items-start justify-content-md-between justify-content-start flex-wrap">
+                                <div class="search-item">
+                                    <label for="destination">Destination:</label>
+                                    <input type="text" class="search-input" id="destination"
+                                           placeholder="Keyword here"
+                                           required>
+                                </div>
+                                <div class="search-item">
+                                    <label for="min-price">Min price:</label>
+                                    <input type="number" value="200" min="50" step="10"
+                                           class="number-select search-input"
+                                           id="min-price">
+                                </div>
+                                <div class="search-item">
+                                    <label for="max-price">Max price:</label>
+                                    <input type="number" value="1000" min="50" step="10"
+                                           class="number-select search-input"
+                                           id="max-price">
+                                </div>
+                                <div class="search-item">
+                                    <button class="button search-button">Find!</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--About block-->
+    <section class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="container-title">
+                        <h2>Who are we?</h2>
+                        <span class="title-comment">Let's get acquainted!</span>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 about-col order-lg-1 order-2">
+                            <div class="about-description">
+                                <p>Since our founding in 2005, our goal has been to change the way people experience
+                                    the
+                                    world. With
+                                    that in mind, it would be a bit of an understatement to just say that we love to
+                                    book
+                                    travel.
+                                    What we do, and who we are goes far beyond that. Travel is about fulfilling life
+                                    long
+                                    dreams,
+                                    creating amazing memories with our loved ones, stretching our boundaries and
+                                    ultimately
+                                    learning
+                                    a little bit about ourselves and the world along the way. We would love to hear
+                                    your
+                                    dream,
+                                    because if you have imagined it, we can help you realize it.</p>
+                                <div class="button about-button"><a href="about.html">Read More</a></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 about-col order-lg-2 order-1">
+                            <div class="about-image">
+                                <img src="images/about.png" alt="Seaside picture">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Top destinations block-->
+    <section class="top">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="container-title">
+                        <h2>Top destinations in Europe</h2>
+                        <span class="title-comment">Pamper yourself with unmatched amenities of Europe</span>
+                    </div>
+                    <div class="row top-content">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="top-item">
+                                <a href="#">
+                                    <div class="top-item-image">
+                                        <img src="images/top-1.png" alt="Paris">
+                                    </div>
+                                    <div class="top-item-content">
+                                        <div class="top-item-price">From $600</div>
+                                        <div class="top-item-destination">Paris, France</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="top-item">
+                                <a href="#">
+                                    <div class="top-item-image">
+                                        <img src="images/top-2.png" alt="Rome">
+                                    </div>
+                                    <div class="top-item-content">
+                                        <div class="top-item-price">From $500</div>
+                                        <div class="top-item-destination">Rome, Italy</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="top-item">
+                                <a href="#">
+                                    <div class="top-item-image">
+                                        <img src="images/top-3.png" alt="London">
+                                    </div>
+                                    <div class="top-item-content">
+                                        <div class="top-item-price">From $800</div>
+                                        <div class="top-item-destination">London, UK</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="top-item">
+                                <a href="#">
+                                    <div class="top-item-image">
+                                        <img src="images/top-4.png" alt="Florence">
+                                    </div>
+                                    <div class="top-item-content">
+                                        <div class="top-item-price">From $300</div>
+                                        <div class="top-item-destination">Florence, Italy</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Special offers block-->
+    <section class="special parallax-background" data-parallax="scroll"
+             data-image-src="images/special-background.png" data-speed="0.6">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="special-item">
+                        <div class="special-item-content">
+                            <div class="special-destination">Budapest</div>
+                            <div class="special-discount">20%</div>
+                            <div class="special-title">Special offer</div>
+                            <div class="special-description">Save a 20% per stateroom with this offer! All you need to
+                                do is
+                                just book a trip to Budapest, hearth of Hungary.
+                                These bonus is combinable with current promotions. Plus, if you’re one of our loyal past
+                                guests,
+                                this offer is combinable with your exclusive $100 per person savings.
+                            </div>
+                            <div class="button special-button"><a href="offers.html">See Offer</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="special-item">
+                        <div class="special-item-content">
+                            <div class="special-destination">Greece</div>
+                            <div class="special-discount">30%</div>
+                            <div class="special-title">Special offer</div>
+                            <div class="special-description">Experience Athens, the cradle of the Western Civilization,
+                                and
+                                the
+                                ancient sites of mainland Greece. You begin with three nights in Athens with a city tour
+                                and dinner, before proceeding to ancient Olympia. Finish up your vacation with one last
+                                night in
+                                Delphi, site of the famous oracle.
+                            </div>
+                            <div class="button special-button"><a href="offers.html">See Offer</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Video block-->
+    <section class="video d-flex flex-column align-items-center justify-content-center">
+        <div class="container">
+            <div class="container-title">
+                <h2>Discover the beauty of the world</h2>
+                <span>Take a look and stop hesitating</span>
+            </div>
+            <div class="content">
+                <video width="1280" height="960" controls>
+                    <source src="video/prague.mp4" type="video/mp4">
+                    Error occurred!
+                </video>
+            </div>
+        </div>
+    </section>
+    <!--Popular block-->
+    <section class="popular">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="container-title">
+                        <h2>Popular destinations all around the globe</h2>
+                        <span>Take a look at this offers</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="popular-content d-flex flex-md-row flex-column flex-wrap align-items-md-center align-items-start justify-content-md-between justify-content-start">
+                        <div class="popular-item">
+                            <a href="offers.html">
+                                <div class="popular-item-image">
+                                    <img src="images/popular-1.png" alt="Paris">
+                                </div>
+                                <div class="popular-item-content">
+                                    <div class="popular-item-price">From $600</div>
+                                    <div class="popular-item-destination">Paris</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="popular-item">
+                            <a href="offers.html">
+                                <div class="popular-item-image">
+                                    <img src="images/popular-2.png" alt="Tahiti">
+                                </div>
+                                <div class="popular-item-content">
+                                    <div class="popular-item-price">From $900</div>
+                                    <div class="popular-item-destination">Tahiti</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="popular-item">
+                            <a href="offers.html">
+                                <div class="popular-item-image">
+                                    <img src="images/popular-3.png" alt="London">
+                                </div>
+                                <div class="popular-item-content">
+                                    <div class="popular-item-price">From $800</div>
+                                    <div class="popular-item-destination">London</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="popular-item">
+                            <a href="offers.html">
+                                <div class="popular-item-image">
+                                    <img src="images/popular-4.png" alt="South Island">
+                                </div>
+                                <div class="popular-item-content">
+                                    <div class="popular-item-price">From $700</div>
+                                    <div class="popular-item-destination">South Island</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="popular-item">
+                            <a href="offers.html">
+                                <div class="popular-item-image">
+                                    <img src="images/popular-5.png" alt="Phuket">
+                                </div>
+                                <div class="popular-item-content">
+                                    <div class="popular-item-price">From $550</div>
+                                    <div class="popular-item-destination">Phuket</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="popular-item">
+                            <a href="offers.html">
+                                <div class="popular-item-image">
+                                    <img src="images/popular-6.png" alt="Dubai">
+                                </div>
+                                <div class="popular-item-content">
+                                    <div class="popular-item-price">From $950</div>
+                                    <div class="popular-item-destination">Dubai</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="popular-item">
+                            <a href="offers.html">
+                                <div class="popular-item-image">
+                                    <img src="images/popular-7.png" alt="New York City">
+                                </div>
+                                <div class="popular-item-content">
+                                    <div class="popular-item-price">From $1000</div>
+                                    <div class="popular-item-destination">New York City</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="popular-item">
+                            <a href="offers.html">
+                                <div class="popular-item-image">
+                                    <img src="images/popular-8.png" alt="Barcelona">
+                                </div>
+                                <div class="popular-item-content">
+                                    <div class="popular-item-price">From $700</div>
+                                    <div class="popular-item-destination">Barcelona</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Subscription block-->
+    <section class="subscription parallax-background" data-parallax="scroll"
+             data-image-src="images/subscribe.png" data-speed="0.6">
+        <div class="overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h3 class="container-top-title">Subscribe to our Newsletter</h3>
+                        <div class="subscription-form-container">
+                            <form class="subscription-form" action="#">
+                                <div class="d-flex flex-md-row flex-column align-content-center justify-content-between">
+                                    <input type="email" id="subscription-email" class="subscription-email"
+                                           placeholder="Your E-mail Address">
+                                    <button type="submit" id="subscription-button" class="subscription-button">Subscribe
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Footer-->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="footer-about">
+                        <div class="logo-container">
+                            <div class="logo">
+                                <div>Carpe Diem</div>
+                                <div>travel agency</div>
+                                <div class="logo-img"><img src="images/logo.png" alt="logo"></div>
+                            </div>
+                        </div>
+                        <div class="footer-description">Carpe Diem has been in business as a full service travel
+                            agency since
+                            2005. The staff is renowned for providing personalized service for all
+                            your corporate and leisure travel needs including group travel, vacations & cruises,
+                            honeymoons, and
+                            destination weddings.
+                        </div>
+                        <div class="copyright">Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                            . All rights reserved.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="footer-news">
+                        <div class="footer-title">Latest News</div>
+                        <div class="footer-news-content">
+                            <div class="footer-news-item">
+                                <div class="footer-news-image"><img src="images/news-1.png" alt="news"></div>
+                                <div class="footer-news-item-content">
+                                    <div class="footer-news-item-title"><a href="news.html">Pros of winter
+                                        travelling</a></div>
+                                    <div class="footer-news-item-date">Dec 25, 2018</div>
+                                </div>
+                            </div>
+                            <div class="footer-news-item">
+                                <div class="footer-news-image"><img src="images/news-2.png" alt="news"></div>
+                                <div class="footer-news-item-content">
+                                    <div class="footer-news-item-title"><a href="news.html">A perfect vacation</a></div>
+                                    <div class="footer-news-item-date">Dec 09, 2018</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="footer-social">
+                        <div class="footer-title">Join us!</div>
+                        <div class="footer-description">We are constantly working to raise the bar on our services.
+                            If you have
+                            any questions or concerns about your experience, please let us know.
+                        </div>
+                        <ul class="footer-social-list  d-flex flex-row flex-wrap align-items-start justify-content-star">
+                            <li class="footer-social-item">
+                                <a href="#">
+                                    <span class="fa fa-instagram" aria-hidden="true"></span>
+                                </a>
+                            </li>
+                            <li class="footer-social-item">
+                                <a href="#">
+                                    <span class="fa fa-facebook" aria-hidden="true"></span>
+                                </a>
+                            </li>
+                            <li class="footer-social-item">
+                                <a href="#">
+                                    <span class="fa fa-twitter" aria-hidden="true"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="plugins/bootstrap4/popper.js"></script>
+<script src="plugins/bootstrap4/bootstrap.min.js"></script>
+<script src="js/parallax.min.js"></script>
+<script src="plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+<script src="js/custom.js"></script>
+</body>
+</html>

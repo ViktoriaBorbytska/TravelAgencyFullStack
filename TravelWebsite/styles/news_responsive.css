@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+@media only screen and (max-width: 1024px) {
+	.sidebar-offer-content
+	{
+		text-align: center;
+	}
+}
+
+@media only screen and (max-width: 991px) {
+	.sidebar-featured {
+		margin-top: 40px;
+	}
+}
+
+@media only screen and (max-width: 575px) {
+	.news {
+		padding: 40px 0;
+	}
+
+	.news-post {
+		margin-bottom: 30px;
+	}
+
+	.post-title a {
+		font-size: 32px;
+	}
+
+	.post-image,
+	.post-text {
+		margin-top: 20px;
+	}
+}
