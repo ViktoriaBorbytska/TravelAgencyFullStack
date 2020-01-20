@@ -1,0 +1,124 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900');
+
+.home {
+	background: url('../images/login-home.png') no-repeat center center;
+	background-size: cover;
+	width: 100%;
+	height: 63vh;
+}
+
+.home-content {
+	margin: 37vh 0 0 15px;
+	width: 100%;
+	text-align: left;
+}
+
+.home-title {
+	font-size: 48px;
+	font-weight: 200;
+	color: #FFFFFF;
+}
+
+.home-breadcrumb {
+	display: inline-block;
+	font-size: 18px;
+	font-weight: 300;
+	color: #FFFFFF;
+}
+
+.home-breadcrumb a {
+	font-size: 18px;
+	font-weight: 200;
+	color: #FFFFFF;
+	transition: all 200ms ease;
+}
+.home-breadcrumb a:hover {
+	color: #D67F1E;
+}
+
+.home-breadcrumb:not(:last-child)::after {
+	content: '/';
+	margin-left: 3px;
+}
+
+.login-col {
+	padding: 30px;
+	margin-bottom: 120px;
+	border: 1px solid #ced4da;
+}
+
+.form-group {
+	margin-bottom: 15px;
+}
+
+label {
+	display: inline-block;
+	max-width: 100%;
+	margin-bottom: 5px;
+	font-weight: 500;
+}
+
+.form-control {
+	font-size: 14px;
+	height: 52px;
+	line-height: 48px;
+	border-radius: 3px;
+}
+
+.login-button {
+	width: 100%;
+	margin: 25px 0;
+	height: 52px;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	background: #D67F1E;
+	color: #FFFFFF;
+	font-size: 16px;
+	font-weight: 500;
+	transition: all 200ms ease;
+}
+
+.login-button:hover {
+	opacity: 0.8;
+}
+
+.register-button {
+	width: 100%;
+	text-align: center;
+	border: 1px solid #ced4da;
+	overflow: hidden;
+}
+
+.register-button a {
+	display: inline-block;
+	position: relative;
+	font-size: 18px;
+	font-weight: 500;
+	color: #131a2f;
+	padding: 10px 15px;
+	transition: all 400ms ease;
+}
+
+.register-button a:hover,
+.register-button:hover{
+	color: #D67F1E;
+	border-color: #D67F1E;
+}
+
+.register-button::before {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	content: '';
+	background: #D67F1E;
+	transition: all 0.5s cubic-bezier(0.615, 0.19, 0.305, 0.91);
+}
+
+.register-button:hover::before {
+	left: 100%;
+}
