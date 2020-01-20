@@ -106,6 +106,98 @@ h3 {
 	text-align: justify;
 }
 
+.resident-to-cart {
+	border-radius: 3px;
+	border: 1px solid #dddddd;
+	margin-top: 25px;
+	padding: 30px;
+	color: #000000;
+}
+
+form h3.inner {
+	margin: -30px -30px 20px -30px;
+	background-color: #D67F1E;
+	padding: 10px 20px 10px 18px;
+	color: #ffffff;
+	border: 1px solid #ffffff;
+	text-align: center;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+}
+
+.form-group {
+	margin-bottom: 15px;
+}
+
+.form-group label {
+	font-weight: 500;
+}
+
+.form-control {
+	font-size: 14px;
+	height: 52px;
+	line-height: 48px;
+	border-radius: 3px;
+}
+
+.numbers-row {
+	position: relative;
+	width: 100%;
+	height: 52px;
+}
+
+.numbers-row input {
+	position: relative;
+	width: calc(100%/3);
+	height: 40px;
+	border-radius: 0;
+	text-align: center;
+	left: calc(100%/3);
+	font-size: 12px;
+	padding: 5px;
+}
+
+.inc {
+	background: #ffffff url(../images/plus.png) no-repeat center center;
+	right: 0;
+	top: 0;
+	border: 1px solid #cccccc;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+
+.dec {
+	background: #ffffff url(../images/minus.png) no-repeat center center;
+	border: 1px solid #cccccc;
+	left: 0;
+	top: 0;
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+
+.inc-button {
+	text-indent: -9999px;
+	cursor: pointer;
+	position: absolute;
+	width: calc(100%/3);;
+	height: 40px;
+	z-index: 9;
+}
+
+.resident-price {
+	text-align: center;
+}
+
+.resident-price > * {
+	display: inline-block;
+	font-size: 18px;
+}
+
+.resident-price span {
+	margin: 0 15px;
+	font-weight: 600;
+}
+
 .item-add-button {
 	width: 100%;
 	text-align: center;

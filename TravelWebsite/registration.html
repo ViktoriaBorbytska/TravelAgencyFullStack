@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Tour Details</title>
+    <title>Registration Page</title>
     <meta charset="UTF-8">
     <meta name="description" content="Travel Agency Web Application">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="styles/normalize.css">
     <link rel="stylesheet" type="text/css" href="plugins/bootstrap4/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="styles/date_time_picker.min.css">
     <link rel="stylesheet" type="text/css" href="styles/main_styles.css">
     <link rel="stylesheet" type="text/css" href="styles/responsive.css">
-    <link rel="stylesheet" type="text/css" href="styles/details_styles.css">
-    <link rel="stylesheet" type="text/css" href="styles/details_responsive.css">
+    <link rel="stylesheet" type="text/css" href="styles/registration_styles.css">
+    <link rel="stylesheet" type="text/css" href="styles/registration_responsive.css">
 </head>
 <body>
-<div class="super-container">
+<div class="super_container">
     <!--Header-->
     <header>
         <div class="container">
@@ -53,7 +52,7 @@
                                     <ul class="main-nav-list">
                                         <li class="main-nav-item"><a href="index.html">Home</a></li>
                                         <li class="main-nav-item"><a href="about.html">About us</a></li>
-                                        <li class="main-nav-item active"><a href="offers.html">Offers</a></li>
+                                        <li class="main-nav-item"><a href="offers.html">Offers</a></li>
                                         <li class="main-nav-item"><a href="news.html">News</a></li>
                                         <li class="main-nav-item"><a href="contacts.html">Contact</a></li>
                                         <li class="main-nav-item"><a href="review.html">Reviews</a></li>
@@ -91,7 +90,7 @@
                 <ul class="menu-list menu-mm">
                     <li class="main-menu-item menu-mm"><a href="index.html">Home</a></li>
                     <li class="main-menu-item menu-mm"><a href="about.html">About us</a></li>
-                    <li class="main-menu-item menu-mm active"><a href="offers.html">Offers</a></li>
+                    <li class="main-menu-item menu-mm"><a href="offers.html">Offers</a></li>
                     <li class="main-menu-item menu-mm"><a href="news.html">News</a></li>
                     <li class="main-menu-item menu-mm"><a href="contacts.html">Contact</a></li>
                     <li class="main-menu-item menu-mm"><a href="review.html">Reviews</a></li>
@@ -115,16 +114,13 @@
             <div class="row">
                 <div class="col">
                     <div class="home-content">
-                        <div class="home-title">Details</div>
+                        <div class="home-title">Registration</div>
                         <div class="home-breadcrumbs">
                             <ul class="home-breadcrumbs-list">
                                 <li class="home-breadcrumb">
                                     <a href="index.html">Home</a>
                                 </li>
-                                <li class="home-breadcrumb">
-                                    <a href="offers.html">Offers</a>
-                                </li>
-                                <li class="home-breadcrumb">Details</li>
+                                <li class="home-breadcrumb">Registration</li>
                             </ul>
                         </div>
                     </div>
@@ -171,125 +167,59 @@
             </div>
         </div>
     </section>
-    <!--About block-->
-    <section class="details">
+    <!--Login block-->
+    <section class="contact">
         <div class="container">
             <div class="row">
                 <div class="col">
                     <div class="container-title">
-                        <h2>Tour details</h2>
-                        <span class="title-comment">Everything you need to know</span>
+                        <h2>Oh, are you a newcomer?</h2>
+                        <span class="title-comment">Join our travelling family now!</span>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-6 item-image">
-                    <img class="top-image" src="images/top-1.png" alt="Paris">
-                </div>
-                <div class="col-lg-6 item-content">
-                    <div class="item-title">Paris, France</div>
-                    <div class="item-price">From $600</div>
-                    <div class="rating rating_4" data-rating="4">
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
-                    </div>
-                    <ul class="item-meta">
-                        <li>1 person</li>
-                        <li>4 nights</li>
-                        <li>3 star hotel</li>
-                    </ul>
-                    <div class="item-hotel">Hotel:
-                        <a href="https://www.hotel-la-nouvelle-republique.paris/en/">Hôtel La Nouvelle République</a>
-                    </div>
-                    <div class="item-text">
-                        Your evening tour begins at a meeting point in the heart of Paris. Climb aboard the
-                        air-conditioned coach head to either the Eiffel Tower or a Seine riverboat, according to your
-                        preference.
-                        If the former, enjoy a gourmet meal with wine, beer, or soft drinks in a heated bubble-dome on
-                        the Eiffel Tower’s terrace. It offers guests unbeatable views of the City of Lights. After
-                        dinner, head to the Seine for a riverboat tour and to admire landmarks as they pass by.
-                        If you’ve chosen the second option, tuck into a gourmet 3-course meal aboard the riverboat and
-                        sightsee. After your meal, visit the Eiffel Tower’s second-floor observation deck with its
-                        panoramic views.
-                        Then travel by coach to your third destination: the Moulin Rouge, a landmark cabaret bar founded
-                        in the 19th century. See dozens of dancers, acrobats, and performers take to the stage as you
-                        toast with Champagne.
-                        Following the performance, the coach returns you to central Paris, where the tour ends.
-                        Note: If the late evening Moulin Rouge performance is fully booked, you see an earlier showing
-                        and receive vouchers to the Eiffel Tower or Seine river cruise.
-                    </div>
-                    <div class="inclusion-list">
-                        <h3>Inclusions:</h3>
-                        <ul>
-                            <li>Luxury air-conditioned coach transport</li>
-                            <li>Découverte’ dinner cruise on the Seine (first service of the Marina restaurant) with
-                                drinks (if option selected)
-                            </li>
-                            <li>Féerie show at the Moulin Rouge with 1/2 bottle (or 1 glass) of champagne depending on
-                                option selected( if option selected)
-                            </li>
-                            <li>French Style Gourmet Meal in heated Dome on 1st Floor Eiffel Tower's Terrace( if option
-                                selected)
-                            </li>
-                            <li>One-hour Seine cruise by glass-enclosed boat with recorded commentary and personal
-                                headphones to listen in the language of your choice (French, English, Spanish, Italian,
-                                German, Portuguese, Russian, Polish, Dutch, Hindi, Arabic, Chinese, Japanese and Korean)
-                            </li>
-                            <li>Multilingual hostess at your service</li>
-                            <li>Entry/Admission - Eiffel Tower</li>
-                            <li>Entry/Admission - Seine River</li>
-                            <li>Entry/Admission - Moulin Rouge</li>
-                            <li>Guaranteed to skip the lines</li>
-                        </ul>
-                    </div>
-                    <form class="resident-to-cart">
-                        <h3 class="inner">- Booking -</h3>
-                        <div class="row">
-                            <div class="col-md-6 col-sm-6">
-                                <div class="form-group">
-                                    <label><span class="fa fa-calendar"></span> Check in</label>
-                                    <input type="text" id="checkIn" class="form-control" data-date-format="yyyy-mm-dd" placeholder="Check in" data-type="checkin-date" name="checkin_date">
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-6">
-                                <div class="form-group">
-                                    <label><span class="fa fa-calendar"></span> Check out</label>
-                                    <input type="text" id="checkOut" class="form-control" data-date-format="yyyy-mm-dd" placeholder="Check out" data-type="checkout-date" name="checkout_date">
-                                </div>
-                            </div>
+                <div class="col-lg-6 offset-lg-3 col-sm-6 offset-sm-3 login-col">
+                    <form class="register-form">
+                        <div class="form-group">
+                            <label>First Name *</label>
+                            <input type="text" name="first_name" class="form-control" placeholder="Your First Name" data-type="first_name" data-error="First name is required." required>
+                            <span class="message-span mt-2 firstNameErr"></span>
                         </div>
-                        <div class="row">
-                            <div class="col-md-6 col-sm-6">
-                                <div class="form-group">
-                                    <label>Adults</label>
-                                    <div class="numbers-row">
-                                        <input type="text" id="adults" class="form-control display-button" value="1">
-                                        <div class="inc inc-button">+</div>
-                                        <div class="dec inc-button">-</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-6">
-                                <div class="form-group">
-                                    <label>Children</label>
-                                    <div class="numbers-row">
-                                        <input type="text" id="children" class="form-control display-button" value="1">
-                                        <div class="inc inc-button">+</div>
-                                        <div class="dec inc-button">-</div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="form-group">
+                            <label>Last Name *</label>
+                            <input type="text" name="last_name" class="form-control" placeholder="Your Last Name" data-type="last_name" data-error="Last name is required." required>
+                            <span class="message-span mt-2 lastNameErr"></span>
                         </div>
-                        <div class="resident-price">
-                            <h3>Trip price:</h3><span>$600</span>
+                        <div class="form-group">
+                            <label>Email *</label>
+                            <input type="text" name="email" class="form-control" placeholder="Your email" data-type="email" data-error="Email is required." required>
+                            <span class="message-span mt-2 emailErr"></span>
                         </div>
-                    </form>
-                    <div class="item-add-button"><a href="#">Want it!</a></div>
-                </div>
+                        <div class="form-group">
+                            <label>Password *</label>
+                            <input type="password" name="password" class="form-control" placeholder="Your password" data-type="password" data-error="Password is required." required>
+                            <div class="password-info">
+                                <h6 class="mt-2">Password must meet the following requirements:</h6>
+                                <ul>
+                                    <li id="letter" class="">At least <strong>one letter</strong></li>
+                                    <li id="capital" class="">At least <strong>one capital letter</strong></li>
+                                    <li id="number" class="">At least <strong>one number</strong></li>
+                                    <li id="length" class="">Be at least <strong>8 characters</strong></li>
+                                </ul>
+                            </div>
+                            <p id="pass-strength" class=""></p>
 
+                            <span class="message-span mt-2 passwordErr"></span>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone *</label>
+                            <input type="text" name="phone" class="form-control" placeholder="Your phone number" data-type="phone" data-error="Phone is required." required>
+                            <span class="message-span mt-2 phoneErr"></span>
+                        </div>
+                        <button type="submit" id="register-button" class="btn register-button">Create an account</button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
@@ -397,14 +327,8 @@
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/parallax.min.js"></script>
 <script src="plugins/bootstrap4/popper.js"></script>
-<script src="plugins/bootstrap4/bootstrap-datepicker.js"></script>
 <script src="plugins/bootstrap4/bootstrap.min.js"></script>
-<script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
-<script src="plugins/greensock/TweenMax.min.js"></script>
-<script src="plugins/greensock/TimelineMax.min.js"></script>
-<script src="plugins/greensock/animation.gsap.min.js"></script>
-<script src="plugins/greensock/ScrollToPlugin.min.js"></script>
 <script src="js/custom.js"></script>
-<script src="js/details_custom.js"></script>
+<script src="js/registration_custom.js"></script>
 </body>
 </html>
