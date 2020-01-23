@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900');
 
 .home {
-	background: url('../images/registration-home.png') no-repeat center center;
+	background: url('../images/profile-home.png') no-repeat center center;
 	background-size: cover;
 	width: 100%;
 	height: 63vh;
@@ -33,6 +33,7 @@
 	color: #FFFFFF;
 	transition: all 200ms ease;
 }
+
 .home-breadcrumb a:hover {
 	color: #D67F1E;
 }
@@ -42,14 +43,63 @@
 	margin-left: 3px;
 }
 
-.registration {
+.profile {
 	padding-bottom: 120px;
 }
 
-.register-col {
+.profile-img {
+	margin: auto;
+}
+
+.img-upload {
+	width: 100%;
+	margin: 20px 0;
+}
+
+.input-file {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.input-file + label {
+	max-width: 80%;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	cursor: pointer;
+	display: inline-block;
+	overflow: hidden;
+	padding: 10px 20px;
+	color: #FFFFFF;
+	background-color: #D67F1E;
+	transition: all 200ms ease;
+	border-radius: .25rem;
+}
+
+.input-file:focus + label,
+.input-file.has-focus + label,
+.input-file + label:hover {
+	opacity: 0.8;
+}
+
+.profile-item {
+	line-height: 2.14;
+	margin-bottom: 1rem;
+}
+
+.profile-item div:first-child {
+	font-weight: 500;
+}
+
+.user-info,
+.reset-form {
 	padding: 30px;
 	border: 1px solid #ced4da;
 }
+
 
 .form-group {
 	margin-bottom: 15px;
@@ -64,8 +114,8 @@ label {
 
 .form-control {
 	font-size: 14px;
-	height: 52px;
-	line-height: 48px;
+	height: 44px;
+	line-height: 40px;
 	border-radius: 3px;
 }
 
@@ -74,10 +124,10 @@ label {
 	color: #bd2130;
 }
 
-.register-button {
+.reset-button {
 	width: 100%;
-	margin: 25px 0;
-	height: 52px;
+	margin-top: 25px;
+	height: 44px;
 	cursor: pointer;
 	border: none;
 	outline: none;
@@ -88,7 +138,7 @@ label {
 	transition: all 200ms ease;
 }
 
-.register-button:hover {
+.reset-button:hover {
 	opacity: 0.8;
 }
 

@@ -42,9 +42,12 @@
 	margin-left: 3px;
 }
 
+.login {
+	padding-bottom: 120px;
+}
+
 .login-col {
 	padding: 30px;
-	margin-bottom: 120px;
 	border: 1px solid #ced4da;
 }
 
