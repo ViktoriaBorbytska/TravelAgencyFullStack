@@ -14,5 +14,4 @@ $(document).ready(function () {
     function classSetter(id, statement) {
         statement ? $(id).addClass('valid') : $(id).removeClass('valid');
     }
-
 });
