@@ -86,6 +86,7 @@ label {
 	font-size: 16px;
 	font-weight: 500;
 	transition: all 200ms ease;
+	border-radius: 3px;
 }
 
 .register-button:hover {

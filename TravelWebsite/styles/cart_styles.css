@@ -41,11 +41,11 @@
 	margin-left: 3px;
 }
 
-.user-cart {
+.cart {
 	padding-bottom:120px;
 }
 
-.user-cart h3 {
+.cart h3 {
 	padding: 120px 0;
 	text-align: center;
 }
@@ -97,7 +97,7 @@ thead {
 .residence-name:hover,
 .residence-hotel:hover,
 .card-option:hover a,
-.user-cart h3 a,
+.cart h3 a,
 .policy-info h4 span {
 	color: #d67f1e;
 }
@@ -115,7 +115,7 @@ thead {
 	font-weight: 500;
 }
 
-.user-cart h3 a:hover,
+.cart h3 a:hover,
 .card-note a:hover {
 	text-decoration: underline;
 }

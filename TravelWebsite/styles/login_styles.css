@@ -1,46 +1,4 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900');
-
-.home {
-	background: url('../images/login-home.png') no-repeat center center;
-	background-size: cover;
-	width: 100%;
-	height: 63vh;
-}
-
-.home-content {
-	margin: 37vh 0 0 15px;
-	width: 100%;
-	text-align: left;
-}
-
-.home-title {
-	font-size: 48px;
-	font-weight: 200;
-	color: #FFFFFF;
-}
-
-.home-breadcrumb {
-	display: inline-block;
-	font-size: 18px;
-	font-weight: 300;
-	color: #FFFFFF;
-}
-
-.home-breadcrumb a {
-	font-size: 18px;
-	font-weight: 200;
-	color: #FFFFFF;
-	transition: all 200ms ease;
-}
-.home-breadcrumb a:hover {
-	color: #D67F1E;
-}
-
-.home-breadcrumb:not(:last-child)::after {
-	content: '/';
-	margin-left: 3px;
-}
 
 .login {
 	padding-bottom: 120px;
@@ -81,6 +39,7 @@ label {
 	font-size: 16px;
 	font-weight: 500;
 	transition: all 200ms ease;
+	border-radius: 3px;
 }
 
 .login-button:hover {
