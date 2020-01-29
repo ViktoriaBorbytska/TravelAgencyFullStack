@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+@media only screen and (max-width: 991px) {
+    .item-image {
+        display: none;
+    }
+
+    .item-content div:nth-of-type(-n + 4),
+    .item-content ul.item-meta {
+        text-align: center;
+    }
+
+    .item-hotel {
+        margin-bottom: 35px;
+    }
+}

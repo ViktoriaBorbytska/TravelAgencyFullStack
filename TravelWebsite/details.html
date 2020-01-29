@@ -9,8 +9,9 @@
     <link rel="stylesheet" type="text/css" href="plugins/bootstrap4/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="styles/date_time_picker.min.css">
     <link rel="stylesheet" type="text/css" href="styles/main_styles.css">
-    <link rel="stylesheet" type="text/css" href="styles/responsive.css">
+    <link rel="stylesheet" type="text/css" href="styles/main_responsive.css">
     <link rel="stylesheet" type="text/css" href="styles/details_styles.css">
+    <link rel="stylesheet" type="text/css" href="styles/details_responsive.css">
 </head>
 <body>
 <div class="super-container">
@@ -31,7 +32,7 @@
                         </div>
                         <div class="col-md-8">
                             <div class="user-access d-flex">
-                                <div class="login ml-auto">
+                                <div class="user-login ml-auto">
                                     <a href="login.html">
                                         <span class="fa fa-user"></span> Log in
                                     </a>
@@ -41,7 +42,7 @@
                                         <span class="fa fa-user"></span> Profile
                                     </a>
                                 </div>
-                                <div class="cart">
+                                <div class="user-cart">
                                     <a href="cart.html">
                                         <span class="fa fa-shopping-cart"></span> Cart
                                     </a>
@@ -185,7 +186,7 @@
                 <div class="col-lg-6 item-image">
                     <img class="top-image" src="images/top-1.png" alt="Paris">
                 </div>
-                <div class="col-lg-6 item-content">
+                <div class="col-lg-6 col-sm-12 item-content">
                     <div class="item-title">Paris, France</div>
                     <div class="item-price">From $600</div>
                     <div class="rating rating_4" data-rating="4">
@@ -286,9 +287,8 @@
                             <h3>Trip price:</h3><span>$600</span>
                         </div>
                     </form>
-                    <div class="item-add-button"><a href="#">Want it!</a></div>
+                    <div class="slider-button item-add-button"><a href="#">Want it!</a></div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -305,7 +305,7 @@
                                 <div class="d-flex flex-md-row flex-column align-content-center justify-content-between">
                                     <input type="email" id="subscription-email" class="subscription-email"
                                            placeholder="Your E-mail Address">
-                                    <button type="submit" id="subscription-button" class="subscription-button">Subscribe
+                                    <button type="submit" id="subscription-button" class="button subscription-button">Subscribe
                                     </button>
                                 </div>
                             </form>

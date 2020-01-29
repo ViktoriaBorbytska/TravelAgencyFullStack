@@ -2,50 +2,13 @@
 
 .home {
 	background: url('../images/cart-home.png') no-repeat center center;
-	background-size: cover;
-	width: 100%;
-	height: 63vh;
 }
 
-.home-content {
-	margin: 37vh 0 0 15px;
-	width: 100%;
-	text-align: left;
+.cart {
+	padding-bottom: 120px;
 }
 
-.home-title {
-	font-size: 48px;
-	font-weight: 200;
-	color: #FFFFFF;
-}
-
-.home-breadcrumb {
-	display: inline-block;
-	font-size: 18px;
-	font-weight: 300;
-	color: #FFFFFF;
-}
-
-.home-breadcrumb a {
-	font-size: 18px;
-	font-weight: 200;
-	color: #FFFFFF;
-	transition: all 200ms ease;
-}
-.home-breadcrumb a:hover {
-	color: #D67F1E;
-}
-
-.home-breadcrumb:not(:last-child)::after {
-	content: '/';
-	margin-left: 3px;
-}
-
-.user-cart {
-	padding-bottom:120px;
-}
-
-.user-cart h3 {
+.cart h3 {
 	padding: 120px 0;
 	text-align: center;
 }
@@ -56,7 +19,7 @@
 }
 
 .cart-card, thead, th, td {
-	border: 1px solid #dddddd;
+	border: 1px solid #ddd;
 }
 
 .cart-card {
@@ -65,7 +28,7 @@
 
 thead {
 	background-color: #D67F1E;
-	color: #ffffff;
+	color: #fff;
 	border-top-left-radius: 3px;
 	border-top-right-radius: 3px;
 }
@@ -97,7 +60,7 @@ thead {
 .residence-name:hover,
 .residence-hotel:hover,
 .card-option:hover a,
-.user-cart h3 a,
+.cart h3 a,
 .policy-info h4 span {
 	color: #d67f1e;
 }
@@ -115,7 +78,7 @@ thead {
 	font-weight: 500;
 }
 
-.user-cart h3 a:hover,
+.cart h3 a:hover,
 .card-note a:hover {
 	text-decoration: underline;
 }
