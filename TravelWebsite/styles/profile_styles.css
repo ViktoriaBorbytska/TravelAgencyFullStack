@@ -1,46 +1,7 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900');
 
 .home {
 	background: url('../images/profile-home.png') no-repeat center center;
-	background-size: cover;
-	width: 100%;
-	height: 63vh;
-}
-
-.home-content {
-	margin: 37vh 0 0 15px;
-	width: 100%;
-	text-align: left;
-}
-
-.home-title {
-	font-size: 48px;
-	font-weight: 200;
-	color: #FFFFFF;
-}
-
-.home-breadcrumb {
-	display: inline-block;
-	font-size: 18px;
-	font-weight: 300;
-	color: #FFFFFF;
-}
-
-.home-breadcrumb a {
-	font-size: 18px;
-	font-weight: 200;
-	color: #FFFFFF;
-	transition: all 200ms ease;
-}
-
-.home-breadcrumb a:hover {
-	color: #D67F1E;
-}
-
-.home-breadcrumb:not(:last-child)::after {
-	content: '/';
-	margin-left: 3px;
 }
 
 .profile {
@@ -73,7 +34,7 @@
 	display: inline-block;
 	overflow: hidden;
 	padding: 10px 20px;
-	color: #FFFFFF;
+	color: #FFF;
 	background-color: #D67F1E;
 	transition: all 200ms ease;
 	border-radius: .25rem;
@@ -100,23 +61,9 @@
 	border: 1px solid #ced4da;
 }
 
-
-.form-group {
-	margin-bottom: 15px;
-}
-
-label {
-	display: inline-block;
-	max-width: 100%;
-	margin-bottom: 5px;
-	font-weight: 500;
-}
-
 .form-control {
-	font-size: 14px;
 	height: 44px;
 	line-height: 40px;
-	border-radius: 3px;
 }
 
 .message-span {
@@ -128,35 +75,6 @@ label {
 	width: 100%;
 	margin-top: 25px;
 	height: 44px;
-	cursor: pointer;
-	border: none;
-	outline: none;
-	background: #D67F1E;
-	color: #FFFFFF;
-	font-size: 16px;
-	font-weight: 500;
-	transition: all 200ms ease;
+	line-height: 40px;
 	border-radius: 3px;
-}
-
-.reset-button:hover {
-	opacity: 0.8;
-}
-
-.password-info {
-	display: none;
-}
-
-.password-info ul li {
-	background: url("../images/cross.png") no-repeat 0 50%;
-	padding-left: 22px;
-	line-height: 24px;
-	color: #ec3f41;
-}
-
-.password-info ul li.valid {
-	background: url("../images/tick.png") no-repeat 0 50%;
-	padding-left: 22px;
-	line-height: 24px;
-	color: #3a7d34;
 }
