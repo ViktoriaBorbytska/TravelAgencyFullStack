@@ -1,0 +1,180 @@
+@charset "utf-8";
+
+.home {
+	background: url('../images/about-home.png') no-repeat center center;
+	background-size: cover;
+	width: 100%;
+	height: 63vh;
+}
+
+.home-content {
+	margin: 37vh 0 0 15px;
+	width: 100%;
+	text-align: left;
+}
+
+.home-title {
+	font-size: 48px;
+	font-weight: 200;
+	color: #FFFFFF;
+}
+
+.home-breadcrumb {
+	display: inline-block;
+	font-size: 18px;
+	font-weight: 300;
+	color: #FFFFFF;
+}
+
+.home-breadcrumb a {
+	font-size: 18px;
+	font-weight: 200;
+	color: #FFFFFF;
+	transition: all 200ms ease;
+}
+
+.home-breadcrumb a:hover {
+	color: #D67F1E;
+}
+
+.home-breadcrumb:not(:last-child)::after {
+	content: '/';
+	margin-left: 3px;
+}
+
+.milestones {
+	margin-top: 82px;
+	padding-bottom: 120px;
+}
+
+.milestones-description {
+	width: 100%;
+	text-align: center;
+}
+
+.milestones-description p {
+	color: #FFFFFF;
+}
+
+.milestones-description p:last-of-type {
+	margin-bottom: 0;
+}
+
+.milestones .container-title h2,
+.milestones .container-title span {
+	color: #FFFFFF;
+}
+
+.milestones-container {
+	margin-top: 111px;
+}
+
+.milestone {
+	text-align: center;
+}
+
+.milestone-text {
+	font-size: 18px;
+	font-weight: 300;
+	color: #FFFFFF;
+	margin-top: -3px;
+}
+
+.milestone-icon {
+	width: 100%;
+	height: 82px;
+	text-align: center;
+}
+
+.milestone-icon img {
+	max-height: 100%;
+}
+
+.milestone-counter {
+	font-size: 36px;
+	font-weight: 300;
+	color: #FFFFFF;
+	margin-top: 43px;
+}
+
+.services {
+	width: 100%;
+	background: #FFFFFF;
+	padding-bottom: 109px;
+}
+
+.services-content {
+	margin-top: 87px;
+}
+
+.icon-box-image {
+	display: inline-block;
+	height: 62px;
+}
+
+.svg path,
+.svg rect,
+.svg polygon {
+	fill: #afafaf;
+	transition: all 200ms ease;
+}
+
+.icon-box:hover .svg path,
+.icon-box:hover .svg rect,
+.icon-box:hover .svg polygon {
+	fill: #D67F1E;
+	transition: all 400ms ease;
+}
+
+.icon-box svg {
+	height: 62px;
+	width: auto;
+}
+
+.icon-box-title {
+	display: inline-block;
+	vertical-align: bottom;
+	font-size: 24px;
+	font-weight: 300;
+	color: #131a2f;
+	padding-left: 22px;
+}
+
+.icon-box-text {
+	margin-top: 14px;
+}
+
+.icon-box p:last-of-type {
+	margin-bottom: 0;
+}
+
+.icon-box-more {
+	display: inline-block;
+	position: relative;
+	font-size: 12px;
+	font-weight: 400;
+	color: #131a2f;
+	margin-top: 35px;
+	overflow: hidden;
+	transition: all 200ms ease;
+}
+
+.icon-box-more:hover {
+	color: #D67F1E;
+}
+
+.icon-box-more::before {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	content: '';
+	background: #D67F1E;
+    transition: all 0.5s cubic-bezier(0.615, 0.19, 0.305, 0.91);
+}
+
+.icon-box-more:hover::before {
+	left: 100%;
+}

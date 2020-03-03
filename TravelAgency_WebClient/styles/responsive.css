@@ -1,0 +1,313 @@
+@charset "utf-8";
+
+@media only screen and (max-width: 1440px) {
+	.header-container {
+		height: 101px;
+	}
+
+	.hamburger {
+		display: none !important;
+	}
+
+	.main-nav-item a {
+		line-height: 57px;
+		font-size: 14px;
+	}
+
+	.user-access a {
+		font-size: 12px;
+		padding: 0 40px;
+	}
+
+	header .logo-container {
+		padding-top: 3.5%;
+	}
+
+	.home-text-background {
+		font-size: 155px;
+	}
+
+	.home-text-foreground {
+		font-size: 42px;
+	}
+
+	header .logo div:first-of-type {
+		font-size: 22px;
+	}
+
+	header .logo div:nth-child(2) {
+		font-size: 9px;
+	}
+
+	.number-select {
+		background: none;
+	}
+}
+
+@media only screen and (max-width: 1199px) {
+	.user-access a,
+	header.scrolled .user-access a {
+		padding: 0 30px;
+	}
+
+	.main-nav-item a {
+		font-size: 14px;
+		padding: 0 22px 17px 22px;
+	}
+
+	header .logo div:first-of-type {
+		font-size: 15px;
+	}
+
+	header .logo-container {
+		padding-top: 4%;
+	}
+
+	header.scrolled .logo-container {
+		padding-top: 3.5%;
+	}
+
+	.special-discount {
+		font-size: 124px;
+	}
+
+	.special-title {
+		font-size: 30px;
+	}
+}
+
+@media only screen and (max-width: 991px) {
+	.main-nav,
+	.user-access {
+		display: none !important;
+	}
+
+	.hamburger {
+		display: flex !important;
+	}
+
+	header .logo-container {
+		padding-top: 5.5%;
+	}
+
+	header.scrolled .logo-container {
+		padding-top: 5%;
+	}
+
+	header .logo div:last-of-type {
+		display: none;
+	}
+
+	header .logo {
+		padding-left: 20px;
+	}
+
+	header .logo div:first-of-type {
+		font-size: 22px;
+	}
+
+	header .logo div:nth-child(2) {
+		font-size: 9px;
+	}
+
+	.home-content {
+		width: 100%;
+	}
+
+	.home-text-background {
+		font-size: 125px;
+	}
+
+	.home-text-foreground {
+		font-size: 42px;
+	}
+
+	.search-item:first-child {
+		width: 100%;
+		margin-bottom: 30px;
+	}
+
+	.search-item:nth-child(n+2)
+	{
+		width: calc(100%/3.5);
+	}
+
+	.about-description {
+		padding-top: 40px;
+	}
+
+	.about-button {
+		margin-left: 40%;
+	}
+
+	.top-item {
+		margin-bottom: 30px;
+		margin-right: 6%;
+	}
+
+	.special-item {
+		margin-bottom: 35px;
+	}
+
+	.special-destination,
+	.special-discount {
+		text-align: center;
+	}
+
+	.special-destination {
+		font-size: 16px;
+	}
+
+	.special-description {
+		font-size: 14px;
+	}
+
+	.popular-item {
+		margin-bottom: 30px;
+	}
+
+	.subscription-email {
+		width:70%;
+	}
+
+	.subscription-button {
+		width: 28.2795%;
+	}
+
+	.footer-title {
+		margin-top: 35px;
+	}
+
+	.footer-description {
+		margin-top: 15px;
+	}
+
+	.copyright {
+		margin-bottom: 0;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.menu-container {
+		right: -100vw;
+		width: 100vw;
+		height: 100vh;
+	}
+
+	header .col-md-4,
+	header .col-md-8 {
+		width: 50%;
+	}
+
+	header .logo-container {
+		padding-top: 7.5%;
+	}
+
+	header.scrolled .logo-container {
+		padding-top: 6.5%;
+	}
+
+	.home-text-background {
+		font-size: 88px;
+	}
+
+	.home-text-foreground {
+		font-size: 36px;
+	}
+
+	.search-item {
+		width: 100% !important;
+		margin-bottom: 30px;
+	}
+
+	.popular-item {
+		width: 100%;
+		margin-bottom: 26px;
+	}
+
+	.subscription-email {
+		width: 100%;
+	}
+
+	.subscription-button {
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 15px;
+	}
+}
+
+@media only screen and (max-width: 575px) {
+	.container-title {
+		padding-top: 50px;
+	}
+
+	.home-text-background {
+		font-size: 80px;
+	}
+
+	.home-text-foreground {
+		font-size: 36px;
+	}
+
+	.search-input {
+		height: 40px;
+		line-height: 36px;
+	}
+
+	.search-button {
+		line-height: 40px;
+	}
+
+	.search-input::placeholder {
+		font-size: 12px !important;
+	}
+
+	.container-title h2 {
+		font-size: 28px;
+		margin-top: 12px;
+	}
+
+	.about-button {
+		margin-left: 32%;
+	}
+
+	.special-item-content {
+		padding: 25px;
+	}
+
+	.special-discount {
+		font-size: 72px;
+	}
+
+	.special-destination,
+	.special-description {
+		font-size: 14px;
+	}
+
+	.special-title {
+		font-size: 24px;
+	}
+
+	.button {
+		height: 40px;
+	}
+
+	.button a {
+		font-size: 14px;
+		line-height: 40px;
+	}
+
+	.subscription-email {
+		height: 40px;
+	}
+
+	.subscription-button {
+		height: 40px;
+		width: 45%;
+		margin-left: 25%;
+	}
+
+	.subscription-email::placeholder {
+		font-size: 12px !important;
+	}
+}

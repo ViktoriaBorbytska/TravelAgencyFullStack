@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+@media only screen and (max-width: 991px) {
+	.user-cart h3 {
+		padding: 60px 0;
+	}
+
+	.policy-info {
+		margin-top: 50px;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.card-holder {
+		margin-bottom: 15px;
+		overflow-y: hidden;
+	}
+}
