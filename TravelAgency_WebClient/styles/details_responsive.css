@@ -1,28 +1,16 @@
 @charset "utf-8";
 
 @media only screen and (max-width: 991px) {
-	.milestones,
-	.services {
-		padding-bottom: 30px;
-	}
+    .item-image {
+        display: none;
+    }
 
-	.milestones-container {
-		margin: 30px 0;
-	}
+    .item-content div:nth-of-type(-n + 4),
+    .item-content ul.item-meta {
+        text-align: center;
+    }
 
-	.milestone-counter {
-		margin-top: 23px;
-	}
-
-	.milestone {
-		margin-bottom: 40px;
-	}
-
-	.icon-box-title {
-		font-size: 22px;
-	}
-
-	.icon-box-more {
-		margin: 15px 0;
-	}
+    .item-hotel {
+        margin-bottom: 35px;
+    }
 }

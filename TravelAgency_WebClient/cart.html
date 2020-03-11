@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="styles/normalize.css">
     <link rel="stylesheet" type="text/css" href="plugins/bootstrap4/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="plugins/magnific-popup/magnific-popup.css">
     <link rel="stylesheet" type="text/css" href="styles/main_styles.css">
-    <link rel="stylesheet" type="text/css" href="styles/responsive.css">
+    <link rel="stylesheet" type="text/css" href="styles/main_responsive.css">
     <link rel="stylesheet" type="text/css" href="styles/cart_styles.css">
     <link rel="stylesheet" type="text/css" href="styles/cart_responsive.css">
 </head>
@@ -30,23 +31,6 @@
                             </div>
                         </div>
                         <div class="col-md-8">
-                            <!-- <div class="user-access d-flex">
-                                <div class="login ml-auto">
-                                    <a href="login.html">
-                                        <span class="fa fa-user"></span> Log in
-                                    </a>
-                                </div>
-                                <div class="user-profile ml-auto">
-                                    <a href="profile.html">
-                                        <span class="fa fa-user"></span> Profile
-                                    </a>
-                                </div>
-                                <div class="cart">
-                                    <a href="cart.html">
-                                        <span class="fa fa-shopping-cart"></span> Cart
-                                    </a>
-                                </div>
-                            </div>-->
                             <div class="d-flex align-items-center justify-content-start">
                                 <nav class="main-nav ml-auto">
                                     <ul class="main-nav-list">
@@ -178,116 +162,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col">
-                    <h3>Wow! Looks like you haven't chosen anything yet... Check out <a href="offers.html">our offers</a> to find the right one!</h3>
-                    <div class="card-holder">
-                        <table class="cart-card">
-                            <thead>
-                            <tr>
-                                <th>Residence</th>
-                                <th>Adults</th>
-                                <th>Children</th>
-                                <th>Checkin Date</th>
-                                <th>Checkout Date</th>
-                                <th>Price</th>
-                                <th>Options</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td class="residence-holder">
-                                    <a class="residence-name" href="details.html">Paris, France</a>
-                                    <a class="residence-hotel"
-                                       href="https://www.hotel-la-nouvelle-republique.paris/en/">Hôtel La Nouvelle
-                                        République</a>
-                                </td>
-                                <td>
-                                    2
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    17 January 2020
-                                </td>
-                                <td>
-                                    18 January 2020
-                                </td>
-                                <td>
-                                    $1200
-                                </td>
-                                <td class="card-option">
-                                    <a href="#" class="remove-order"><span class="fa fa-trash"></span></a>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                        <div class="card-note">
-                            <span class="unbooked-card">This order is not booked yet. <a href="#" class="book-order">Book it now!</a></span>
-                        </div>
-                    </div>
-                    <div class="card-holder">
-                        <table class="cart-card">
-                            <thead>
-                            <tr>
-                                <th>Residence</th>
-                                <th>Adults</th>
-                                <th>Children</th>
-                                <th>Checkin Date</th>
-                                <th>Checkout Date</th>
-                                <th>Price</th>
-                                <th>Options</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td class="residence-holder">
-                                    <a class="residence-name" href="details.html">Paris, France</a>
-                                    <a class="residence-hotel"
-                                       href="https://www.hotel-la-nouvelle-republique.paris/en/">Hôtel La Nouvelle
-                                        République</a>
-                                </td>
-                                <td>
-                                    2
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    17 January 2020
-                                </td>
-                                <td>
-                                    18 January 2020
-                                </td>
-                                <td>
-                                    $1200
-                                </td>
-                                <td class="card-option">
-                                    <a href="contacts.html" class="contact"><span class="fa fa-envelope"></span> Contact
-                                        manager</a>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                        <div class="card-note">
-                            <span class="booked-card">This order is already booked.</span>
-                        </div>
-                    </div>
-                    <div class="policy-info">
-                        <h4>Cancellation <span>policy</span></h4>
-                        <p>In the event of cancellation of tour / travel services due to any avoidable / unavoidable
-                            reason/s we must be notified of the same in writing. Cancellation charges will be effective
-                            from the date we receive advice in writing, and cancellation charges would be as follows:</p>
-                        <ul>
-                            <li>60 days prior to arrival: 10% of the Tour / service cost</li>
-                            <li>45 days prior to arrival: 20% of the Tour / service cost</li>
-                            <li>15 days prior to arrival: 25% of the Tour / service cost</li>
-                            <li>07 days prior to arrival: 50% of the Tour / service cost</li>
-                        </ul>
-                        <p>Less than 72 hours or no show: no refund. In case of Special Trains Journeys and peak season
-                            hotel bookings a separate cancellation policy is applicable (which can be advised as and
-                            when required).</p>
-                    </div>
+                <div class="col cart-content">
                 </div>
             </div>
         </div>
@@ -306,8 +181,12 @@
                                 <div class="d-flex flex-md-row flex-column align-content-center justify-content-between">
                                     <input type="email" id="subscription-email" class="subscription-email"
                                            placeholder="Your E-mail Address">
-                                    <button type="submit" id="subscription-button" class="subscription-button">Subscribe
+                                    <button type="submit" id="subscription-button" class="button subscription-button "><a class="popup-with-move-anim" href="#subscription-dialog">Subscribe</a>
                                     </button>
+                                    <div id="subscription-dialog" class="zoom-anim-dialog mfp-hide">
+                                        <h4>Horray!</h4>
+                                        <p>You have successfully subscribed to our newsletter. Stay in touch with news and hot offers from all around the world.</p>
+                                    </div>
                                 </div>
                             </form>
                         </div>
@@ -399,7 +278,10 @@
 <script src="plugins/bootstrap4/popper.js"></script>
 <script src="plugins/bootstrap4/bootstrap.min.js"></script>
 <script src="plugins/Isotope/isotope.pkgd.min.js"></script>
-<script src="js/custom.js"></script>
-<script src="js/offers_custom.js"></script>
+<script src="js/generators.js"></script>
+<script src="js/headerHandler.js"></script>
+<script src="js/DynamicGeneration/cartDynamicGeneration.js"></script>
+<script src="plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+<script src="js/popupsGeneration.js"></script>
 </body>
 </html>

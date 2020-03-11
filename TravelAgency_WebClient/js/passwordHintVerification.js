@@ -1,7 +1,7 @@
 $(document).ready(function () {
     "use strict";
 
-    $('input[type=password]').keyup(function() {
+    $(document).on('keyup', 'input[type=password]', function() {
         let pswd = $(this).val();
         let pswdContainer = $('.password-info');
         pswd === '' ? pswdContainer.css('display', 'none') : pswdContainer.css('display', 'block');

@@ -7,13 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="styles/normalize.css">
     <link rel="stylesheet" type="text/css" href="plugins/bootstrap4/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="plugins/magnific-popup/magnific-popup.css">
     <link rel="stylesheet" type="text/css" href="styles/main_styles.css">
-    <link rel="stylesheet" type="text/css" href="styles/responsive.css">
+    <link rel="stylesheet" type="text/css" href="styles/main_responsive.css">
     <link rel="stylesheet" type="text/css" href="styles/profile_styles.css">
     <link rel="stylesheet" type="text/css" href="styles/profile_responsive.css">
 </head>
 <body>
-<div class="super_container">
+<div class="super-container">
     <!--Header-->
     <header>
         <div class="container">
@@ -30,23 +31,6 @@
                             </div>
                         </div>
                         <div class="col-md-8">
-                           <!-- <div class="user-access d-flex">
-                                <div class="login ml-auto">
-                                    <a href="login.html">
-                                        <span class="fa fa-user"></span> Log in
-                                    </a>
-                                </div>
-                                <div class="user-profile ml-auto">
-                                    <a href="profile.html">
-                                        <span class="fa fa-user"></span> Profile
-                                    </a>
-                                </div>
-                                <div class="cart">
-                                    <a href="cart.html">
-                                        <span class="fa fa-shopping-cart"></span> Cart
-                                    </a>
-                                </div>
-                            </div>-->
                             <div class="d-flex align-items-center justify-content-start">
                                 <nav class="main-nav ml-auto">
                                     <ul class="main-nav-list">
@@ -178,6 +162,7 @@
                         <h2>Your personal profile</h2>
                     </div>
                     <div class="row justify-content-center">
+                        <!--
                         <div class="col-lg-5 order-1">
                             <div class="user-info">
                                 <div class="row text-center">
@@ -186,7 +171,7 @@
                                              class="rounded-circle img-thumbnail" alt="avatar"/>
                                     </div>
                                     <div class="img-upload">
-                                        <input type="file" name="file" id="file" class="input-file"/>
+                                        <input type="file" id="file" class="input-file"/>
                                         <label for="file"><span>Choose a file&hellip;</span></label>
                                     </div>
                                 </div>
@@ -213,15 +198,13 @@
                             <form class="reset-form">
                                 <div class="form-group">
                                     <label>Old password *</label>
-                                    <input type="password" name="password" class="form-control"
-                                           placeholder="Your old password"
+                                    <input type="password" class="form-control" placeholder="Your old password"
                                            data-type="password" data-error="Password is required." required>
                                     <span class="message-span mt-2"></span>
                                 </div>
                                 <div class="form-group">
                                     <label>New password *</label>
-                                    <input type="password" name="password" class="form-control"
-                                           placeholder="Your new password"
+                                    <input type="password" class="form-control" placeholder="Your new password"
                                            data-type="password" data-error="Password is required." required>
                                     <div class="password-info">
                                         <h6 class="mt-2">Password must meet the following requirements:</h6>
@@ -240,11 +223,12 @@
                                            data-type="password" data-error="Password is required." required>
                                     <span class="message-span mt-2"></span>
                                 </div>
-                                <button type="submit" id="reset-button" class="btn reset-button">Reset password</button>
+                                <button type="submit" id="reset-button" class="button reset-button">Reset password</button>
                                 <button type="button" id="logout-button" class="btn reset-button">Log out</button>
                             </form>
-                        </div>
+                        </div>-->
                     </div>
+
                 </div>
             </div>
         </div>
@@ -262,8 +246,12 @@
                                 <div class="d-flex flex-md-row flex-column align-content-center justify-content-between">
                                     <input type="email" id="subscription-email" class="subscription-email"
                                            placeholder="Your E-mail Address">
-                                    <button type="submit" id="subscription-button" class="subscription-button">Subscribe
+                                    <button type="submit" id="subscription-button" class="button subscription-button "><a class="popup-with-move-anim" href="#subscription-dialog">Subscribe</a>
                                     </button>
+                                    <div id="subscription-dialog" class="zoom-anim-dialog mfp-hide">
+                                        <h4>Horray!</h4>
+                                        <p>You have successfully subscribed to our newsletter. Stay in touch with news and hot offers from all around the world.</p>
+                                    </div>
                                 </div>
                             </form>
                         </div>
@@ -354,10 +342,13 @@
 <script src="js/parallax.min.js"></script>
 <script src="plugins/bootstrap4/popper.js"></script>
 <script src="plugins/bootstrap4/bootstrap.min.js"></script>
+<script src="js/generators.js"></script>
 <script src="js/config.js"></script>
-<script src="js/custom.js"></script>
-<script src="js/profile_custom.js"></script>
-<script src="js/registration_custom.js"></script>
-<script src="js/profile.js"></script>
+<script src="js/headerHandler.js"></script>
+<script src="js/profileFileUpload.js"></script>
+<script src="js/passwordHintVerification.js"></script>
+<script src="js/DynamicGeneration/profileDynamicGeneration.js"></script>
+<script src="plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+<script src="js/popupsGeneration.js"></script>
 </body>
 </html>

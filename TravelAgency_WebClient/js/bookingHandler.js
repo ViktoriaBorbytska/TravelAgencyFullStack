@@ -16,6 +16,7 @@ $(document).ready(function () {
         if (e.date.valueOf() > checkOut.datepicker("getDate").valueOf() || !checkOut.datepicker("getDate").valueOf()) {
             let t = new Date(e.date);
             t.setDate(t.getDate() + 1);
+            t.setDate(t.getDate() + 1);
             checkOut.datepicker("update", t)
         }
         $("#checkOut")[0].focus()

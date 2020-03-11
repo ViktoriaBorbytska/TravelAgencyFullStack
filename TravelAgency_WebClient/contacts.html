@@ -7,13 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="styles/normalize.css">
     <link rel="stylesheet" type="text/css" href="plugins/bootstrap4/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="plugins/magnific-popup/magnific-popup.css">
     <link rel="stylesheet" type="text/css" href="styles/main_styles.css">
-    <link rel="stylesheet" type="text/css" href="styles/responsive.css">
+    <link rel="stylesheet" type="text/css" href="styles/main_responsive.css">
     <link rel="stylesheet" type="text/css" href="styles/contact_styles.css">
     <link rel="stylesheet" type="text/css" href="styles/contact_responsive.css">
 </head>
 <body>
-<div class="super_container">
+<div class="super-container">
     <!--Header-->
     <header>
         <div class="container">
@@ -30,23 +31,6 @@
                             </div>
                         </div>
                         <div class="col-md-8">
-                            <!-- <div class="user-access d-flex">
-                                <div class="login ml-auto">
-                                    <a href="login.html">
-                                        <span class="fa fa-user"></span> Log in
-                                    </a>
-                                </div>
-                                <div class="user-profile ml-auto">
-                                    <a href="profile.html">
-                                        <span class="fa fa-user"></span> Profile
-                                    </a>
-                                </div>
-                                <div class="cart">
-                                    <a href="cart.html">
-                                        <span class="fa fa-shopping-cart"></span> Cart
-                                    </a>
-                                </div>
-                            </div>-->
                             <div class="d-flex align-items-center justify-content-start">
                                 <nav class="main-nav ml-auto">
                                     <ul class="main-nav-list">
@@ -232,8 +216,12 @@
                             <textarea id="contact-message" class="contact-input contact-message" name="message"
                                       placeholder="Message" data-error="Please, write us a message."
                                       required></textarea>
-                            <button id="contact-send" type="submit" class="contact-send" value="Submit">Send
+                            <button id="contact-send" type="submit" class="button contact-send" value="Submit"><a class="popup-with-move-anim" href="#message-dialog">Send</a>
                             </button>
+                            <div id="message-dialog" class="zoom-anim-dialog mfp-hide">
+                                <h4>Horray!</h4>
+                                <p>Your message has been successfully sent to our manager. You will get answer as soon as possible.</p>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -253,8 +241,12 @@
                                 <div class="d-flex flex-md-row flex-column align-content-center justify-content-between">
                                     <input type="email" id="subscription-email" class="subscription-email"
                                            placeholder="Your E-mail Address">
-                                    <button type="submit" id="subscription-button" class="subscription-button">Subscribe
+                                    <button type="submit" id="subscription-button" class="button subscription-button "><a class="popup-with-move-anim" href="#subscription-dialog">Subscribe</a>
                                     </button>
+                                    <div id="subscription-dialog" class="zoom-anim-dialog mfp-hide">
+                                        <h4>Horray!</h4>
+                                        <p>You have successfully subscribed to our newsletter. Stay in touch with news and hot offers from all around the world.</p>
+                                    </div>
                                 </div>
                             </form>
                         </div>
@@ -345,6 +337,9 @@
 <script src="js/parallax.min.js"></script>
 <script src="plugins/bootstrap4/popper.js"></script>
 <script src="plugins/bootstrap4/bootstrap.min.js"></script>
-<script src="js/custom.js"></script>
+<script src="js/generators.js"></script>
+<script src="js/headerHandler.js"></script>
+<script src="plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+<script src="js/popupsGeneration.js"></script>
 </body>
 </html>

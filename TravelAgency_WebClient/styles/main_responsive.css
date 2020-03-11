@@ -23,14 +23,6 @@
 		padding-top: 3.5%;
 	}
 
-	.home-text-background {
-		font-size: 155px;
-	}
-
-	.home-text-foreground {
-		font-size: 42px;
-	}
-
 	header .logo div:first-of-type {
 		font-size: 22px;
 	}
@@ -65,14 +57,6 @@
 
 	header.scrolled .logo-container {
 		padding-top: 3.5%;
-	}
-
-	.special-discount {
-		font-size: 124px;
-	}
-
-	.special-title {
-		font-size: 30px;
 	}
 }
 
@@ -110,18 +94,6 @@
 		font-size: 9px;
 	}
 
-	.home-content {
-		width: 100%;
-	}
-
-	.home-text-background {
-		font-size: 125px;
-	}
-
-	.home-text-foreground {
-		font-size: 42px;
-	}
-
 	.search-item:first-child {
 		width: 100%;
 		margin-bottom: 30px;
@@ -140,34 +112,8 @@
 		margin-left: 40%;
 	}
 
-	.top-item {
-		margin-bottom: 30px;
-		margin-right: 6%;
-	}
-
-	.special-item {
-		margin-bottom: 35px;
-	}
-
-	.special-destination,
-	.special-discount {
-		text-align: center;
-	}
-
-	.special-destination {
-		font-size: 16px;
-	}
-
-	.special-description {
-		font-size: 14px;
-	}
-
-	.popular-item {
-		margin-bottom: 30px;
-	}
-
 	.subscription-email {
-		width:70%;
+		width: 70%;
 	}
 
 	.subscription-button {
@@ -207,22 +153,9 @@
 		padding-top: 6.5%;
 	}
 
-	.home-text-background {
-		font-size: 88px;
-	}
-
-	.home-text-foreground {
-		font-size: 36px;
-	}
-
 	.search-item {
 		width: 100% !important;
 		margin-bottom: 30px;
-	}
-
-	.popular-item {
-		width: 100%;
-		margin-bottom: 26px;
 	}
 
 	.subscription-email {
@@ -230,23 +163,13 @@
 	}
 
 	.subscription-button {
-		margin-left: auto;
-		margin-right: auto;
-		margin-top: 15px;
+		margin: 15px auto 0 auto;
 	}
 }
 
 @media only screen and (max-width: 575px) {
 	.container-title {
 		padding-top: 50px;
-	}
-
-	.home-text-background {
-		font-size: 80px;
-	}
-
-	.home-text-foreground {
-		font-size: 36px;
 	}
 
 	.search-input {
@@ -271,23 +194,6 @@
 		margin-left: 32%;
 	}
 
-	.special-item-content {
-		padding: 25px;
-	}
-
-	.special-discount {
-		font-size: 72px;
-	}
-
-	.special-destination,
-	.special-description {
-		font-size: 14px;
-	}
-
-	.special-title {
-		font-size: 24px;
-	}
-
 	.button {
 		height: 40px;
 	}
@@ -302,8 +208,8 @@
 	}
 
 	.subscription-button {
-		height: 40px;
 		width: 45%;
+		line-height: 40px;
 		margin-left: 25%;
 	}
 

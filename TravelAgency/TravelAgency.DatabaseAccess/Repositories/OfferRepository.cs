@@ -27,7 +27,7 @@ namespace TravelAgency.DatabaseAccess.Repositories
 
         public async Task<IReadOnlyCollection<OfferData>> GetTopAsync()
         {
-            return Map(await context.Offers.Where(offer => offer.Mark > 2).ToListAsync());
+            return Map(await context.Offers.Where(offer => offer.Mark > 4).ToListAsync());
         }
 
         public async Task<OfferData> GetAsync(int id)
