@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+@media only screen and (max-width: 991px) {
+	.sorting > li {
+		margin-right: 5px;
+	}
+
+	.item-image,
+	.item-content {
+		width: 50%;
+	}
+
+	.item-more {
+		margin: 15px 0;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.item-text {
+		display: none;
+	}
+
+	.detailed-view span,
+	.box-view span,
+	.detailed-view:hover span,
+	.box-view:hover span {
+		color: #dbdbdb;
+	}
+}
+
+@media only screen and (max-width: 575px) {
+	.item-content {
+		padding-left: 15px;
+	}
+}
