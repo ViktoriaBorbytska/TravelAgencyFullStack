@@ -1,10 +1,11 @@
 ﻿using System.Threading.Tasks;
+using TravelAgency.Interfaces.Dto.Models;
 
 namespace TravelAgency.Interfaces.Services
 {
     public interface ISubscriptionService
     {
-        Task AddAsync(string subscriberEmail);
+        Task<DefaultResponseModel> AddAsync(string subscriberEmail);
 
         Task SendEmailAsync();
     }

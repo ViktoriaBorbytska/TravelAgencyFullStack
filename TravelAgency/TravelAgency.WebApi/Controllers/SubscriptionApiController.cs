@@ -17,11 +17,16 @@ namespace TravelAgency.WebApi.Controllers
 
         [HttpGet]
         [Route("send")]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> SendEmail()
         {
             await subscriptionService.SendEmailAsync();
 
-            return Json("Probably sent ¯\\_(ツ)_/¯ ");
+            return Json("Letters have been successfully sent.");
         }
+
+        [HttpPost]
+        [Route("add")]
+        public async Task<IActionResult> Subscribe(string email)
+            => Json(await subscriptionService.AddAsync(email));
     }
 }

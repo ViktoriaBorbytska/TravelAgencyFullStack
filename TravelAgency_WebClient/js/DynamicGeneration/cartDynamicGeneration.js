@@ -1,9 +1,60 @@
 $(document).ready(function () {
 
-    generateEmptyCartSign();
-    generateCartCard(false, 1);
-    generateCartCard(true, 2);
-    generatePolicyInfo();
+    if (localStorage.getItem("jwt") === null) {
+        generateEmptyCartSign();
+    } else {
+        fetch(config.apiDomain + `/api/booking/of-client/${localStorage.getItem("jwt")}`, {
+            method: "get",
+        })
+            .then(res => res.json())
+            .then(res => {
+                let booked = [];
+                let notBooked = [];
+
+                if (res.length === 0) {
+                    generateEmptyCartSign();
+                    generatePolicyInfo();
+                } else {
+                    res.forEach(card => {
+                    if (card.isBooked) {
+                        booked.push(card);
+                    } else {
+                        notBooked.push(card);
+                    }});
+
+                    notBooked.forEach(card => {
+                        generateCartCard(false, card.id, card);
+                    });
+
+                    booked.forEach(card => {
+                        generateCartCard(true, card.id, card);
+                    });
+                    generatePolicyInfo();
+                }
+            });
+    }
+
+    $('body').on('click', '.book-order', function(event) {
+        console.log(event.currentTarget.id);
+        let dto = {
+            token: localStorage.getItem("jwt"),
+            orderId: event.currentTarget.id.replace(/\D+/g,"")
+        }
+
+        fetch(config.apiDomain + `/api/booking/book`, {
+            method: "post",
+            headers: {
+                "Content-type": "application/json"
+            },
+            body: JSON.stringify(dto)
+        })
+            .then(res => res.json())
+            .then(res => {
+                if (res.isSuccessful) {
+                    window.location.href = "cart.html";
+                }
+            });
+    });
 
     function generateEmptyCartSign() {
         $('<h3>', {'text': 'Wow! Looks like you haven\'t chosen anything yet... Check out '})
@@ -14,7 +65,29 @@ $(document).ready(function () {
             .appendTo('.cart-content');
     }
 
-    function generateCartCard(isBooked, id) {
+    function formatDate(dateStr) {
+        let date = new Date(dateStr);
+
+        var month = new Array();
+        month[0] = "January";
+        month[1] = "February";
+        month[2] = "March";
+        month[3] = "April";
+        month[4] = "May";
+        month[5] = "June";
+        month[6] = "July";
+        month[7] = "August";
+        month[8] = "September";
+        month[9] = "October";
+        month[10] = "November";
+        month[11] = "December";
+
+        return date.getDate() + ' ' 
+        + month[date.getMonth()] + ' ' 
+        + date.getFullYear()
+    }
+
+    function generateCartCard(isBooked, id, card) {
         generateContainer('<div>', 'card-holder')
             .append(
                 $('<table>', {'class': 'cart-card'})
@@ -30,7 +103,7 @@ $(document).ready(function () {
                         )
                     )
                     .append($('<tbody>')
-                        .append($('<tr>')
+                        .append($('<tr>', {'id': "addedrow"+id})
                             .append($('<td>', {'class': 'residence-holder'})
                                 .append(
                                     generateLink('details.html', 'Paris, France', 'residence-name')
@@ -39,16 +112,16 @@ $(document).ready(function () {
                                     generateLink('https://www.hotel-la-nouvelle-republique.paris/en/', 'Hôtel La Nouvelle République', 'residence-hotel')
                                 )
                             )
-                            .append($('<td>', {'text': '2'}))
-                            .append($('<td>', {'text': '0'}))
-                            .append($('<td>', {'text': '17 January 2020'}))
-                            .append($('<td>', {'text': '18 January 2020'}))
-                            .append($('<td>', {'text': '$1200'}))
+                            .append($('<td>', {'text': card.adultCount}))
+                            .append($('<td>', {'text': card.childrenCount}))
+                            .append($('<td>', {'text': formatDate(card.checkIn)}))
+                            .append($('<td>', {'text': formatDate(card.checkOut)}))
+                            .append($('<td>', {'text': card.price}))
                         )
                     )
             )
             .append(
-                generateContainer('<div>', 'card-note')
+                generateContainer('<div>', 'card-note', "", "addedcard-note"+id)
             )
             .appendTo('.cart-content');
 
@@ -61,12 +134,12 @@ $(document).ready(function () {
                         )
                         .append(' Remove order')
                 )
-                .appendTo($('tbody tr')[id-1]);
+                .appendTo($('tbody tr#addedrow'+id));
             generateContainer('<span>', 'unbooked-card', 'This order is not booked yet. ')
                 .append(
-                    generateLink('#', 'Book it now!', 'book-order')
+                    generateLink('#', 'Book it now!', 'book-order', "book-order"+id)
                 )
-                .appendTo($('.card-note')[id-1]);
+                .appendTo($('.card-note#addedcard-note'+id));
         } else {
             $('<td>', {'class': 'card-option'})
                 .append(
@@ -76,9 +149,9 @@ $(document).ready(function () {
                         )
                         .append(' Contact manager')
                 )
-                .appendTo($('tbody tr')[id-1]);
+                .appendTo($('tbody tr#addedrow'+id));
             generateContainer('<span>', 'booked-card', 'This order is already booked.')
-                .appendTo($('.card-note')[id-1]);
+                .appendTo($('.card-note#addedcard-note'+id));
         }
     }
 

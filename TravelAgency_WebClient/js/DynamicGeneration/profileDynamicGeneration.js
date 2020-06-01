@@ -1,9 +1,11 @@
 $(document).ready(function () {
-    $('#logout-button').click(logout);
+    $('body').on("click", "#logout-button", () => {
+        logout();
+    });
 
-    //if (localStorage.getItem("jwt") === null) {
-    //  window.location.href = "index.html";
-    //}
+    if (localStorage.getItem("jwt") === null) {
+      window.location.href = "index.html";
+    }
     generateUserCard();
 
     function generateUserCard() {

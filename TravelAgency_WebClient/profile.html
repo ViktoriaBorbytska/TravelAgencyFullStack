@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MKRNXR5');</script>
+    <!-- End Google Tag Manager -->
     <title>User Profile</title>
     <meta charset="UTF-8">
     <meta name="description" content="Travel Agency Web Application">
@@ -14,6 +21,10 @@
     <link rel="stylesheet" type="text/css" href="styles/profile_responsive.css">
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MKRNXR5"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 <div class="super-container">
     <!--Header-->
     <header>
@@ -129,18 +140,21 @@
                                     <label for="destination">Destination:</label>
                                     <input type="text" class="destination search-input" id="destination"
                                            placeholder="Keyword here"
+                                           name="offerDestination"
                                            required>
                                 </div>
                                 <div class="search-item">
                                     <label for="min-price">Min price:</label>
                                     <input type="number" value="200" min="50" step="10"
                                            class="number-select search-input"
+                                           name="priceFrom"
                                            id="min-price">
                                 </div>
                                 <div class="search-item">
                                     <label for="max-price">Max price:</label>
                                     <input type="number" value="1000" min="50" step="10"
                                            class="number-select search-input"
+                                           name="priceTo"
                                            id="max-price">
                                 </div>
                                 <div class="search-item">
@@ -244,13 +258,11 @@
                         <div class="subscription-form-container">
                             <form class="subscription-form" action="#">
                                 <div class="d-flex flex-md-row flex-column align-content-center justify-content-between">
-                                    <input type="email" id="subscription-email" class="subscription-email"
+                                    <input type="email" id="subscription-email" class="subscription-email" name="email"
                                            placeholder="Your E-mail Address">
                                     <button type="submit" id="subscription-button" class="button subscription-button "><a class="popup-with-move-anim" href="#subscription-dialog">Subscribe</a>
                                     </button>
                                     <div id="subscription-dialog" class="zoom-anim-dialog mfp-hide">
-                                        <h4>Horray!</h4>
-                                        <p>You have successfully subscribed to our newsletter. Stay in touch with news and hot offers from all around the world.</p>
                                     </div>
                                 </div>
                             </form>
@@ -350,5 +362,7 @@
 <script src="js/DynamicGeneration/profileDynamicGeneration.js"></script>
 <script src="plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
 <script src="js/popupsGeneration.js"></script>
+<script src="js/searchHandler.js"></script>
+<script src="js/subcriptionHandler.js"></script>
 </body>
 </html>

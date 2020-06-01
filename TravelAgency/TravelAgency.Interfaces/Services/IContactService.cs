@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Threading.Tasks;
 using TravelAgency.Interfaces.Dto;
 
 namespace TravelAgency.Interfaces.Services
 {
     public interface IContactService
     {
-        void ContactManager(EmailData emailData);
+        Task ContactManagerAsync(EmailData emailData);
     }
 }

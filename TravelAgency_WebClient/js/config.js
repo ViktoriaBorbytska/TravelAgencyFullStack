@@ -1,3 +1,4 @@
 config = {
-    apiDomain: "http://localhost:61248"
+    //apiDomain: "http://localhost:53815"
+      apiDomain: "https://travelagencyapp.azurewebsites.net"
 }

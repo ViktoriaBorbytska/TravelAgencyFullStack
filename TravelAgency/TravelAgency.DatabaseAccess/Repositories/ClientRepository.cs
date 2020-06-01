@@ -50,6 +50,7 @@ namespace TravelAgency.DatabaseAccess.Repositories
         private ClientData Map(Client client)
             => new ClientData
             {
+                Id = client.Id,
                 Name = client.FirstName,
                 Surname = client.LastName,
                 UserId = client.UserId
