@@ -1,7 +1,7 @@
 $(document).ready(function () {
     generatePasswordHint().appendTo($('.register-form div.form-group')[3]);
 
-    $('.btn').click(submitForm);
+    $('.register-button').click(submitForm);
 
     if (localStorage.getItem("jwt") !== null) {
         window.location.href = "index.html";
@@ -12,7 +12,14 @@ var state = {};
 
 function setStateInfo(message) {
     state.info = message;
-    $('.text-danger').text(message);
+    if (message !== "") {
+        if (message.toLowerCase().indexOf("email") + 1) {
+            $($(".message-span")[2]).text(message);
+        }
+        if (message.toLowerCase().indexOf("password") + 1) {
+            $($(".message-span")[3]).text(message);
+        }
+    }
 }
 
 function isEmptyField(field) {
@@ -39,6 +46,8 @@ function validate() {
         result.message = "Empty fields are not allowed";
     } else if (state.password !== state.confirmPassword) {
         result.message = "Passwords should match";
+    } else if (!passwordVerification(state.password)) {
+        result.message = "Password should match requirements";
     } else {
         result.message = "Validation complited";
         result.successful = true;
@@ -46,11 +55,14 @@ function validate() {
     return result;
 }
 
+function passwordVerification(pswd) {
+    return pswd.length >= 8 && pswd.match(/[A-z]/) && pswd.match(/[A-Z]/) && pswd.match(/\d/);
+}
+
 function formDataToState(formData) {
     formData.forEach(data => {
         state[data.name] = data.value;
     });
-
 }
 
 function submitForm(event) {
@@ -62,7 +74,7 @@ function submitForm(event) {
         setStateInfo(validation.message);
         return;
     }
-    setStateInfo("ᅠ");
+    setStateInfo("");
     let dto = {
         email: state.email,
         username: state.first_name,

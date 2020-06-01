@@ -85,7 +85,7 @@ $(document).ready(function () {
                                 generateContainer('<div>', 'resident-price')
                                     .append($('<h3>', {'text': 'Trip price:'}))
                                     .append(
-                                        generateContainer('<span>', '', '$600'))
+                                        generateContainer('<span>', '', '$' + response['price'], 'trip-price'))
                             )
                     )
                     .append(
@@ -128,6 +128,7 @@ $(document).ready(function () {
                     .append(
                         $('<input>', {
                             'type': 'text',
+                            'name': id,
                             'id': id,
                             'class': 'form-control',
                             'data-date-format': 'yyyy-mm-dd',
@@ -151,9 +152,10 @@ $(document).ready(function () {
                             .append(
                                 $('<input>', {
                                     'type': 'text',
+                                    'name': id,
                                     'id': id,
                                     'class': 'form-control display-button',
-                                    'value': '1'
+                                    'value': labelText === 'Adults' ? '1' : '0'
                                 })
                             )
                             .append(
@@ -164,5 +166,5 @@ $(document).ready(function () {
                             )
                     )
             );
-    }
+    }    
 });

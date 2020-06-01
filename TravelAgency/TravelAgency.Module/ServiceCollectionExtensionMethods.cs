@@ -60,6 +60,7 @@ namespace TravelAgency.Module
         {
             serviceCollection.AddTransient<IMailHandler, MailHandler>();
             serviceCollection.AddTransient<ISessionHandler, SessionHandler>();
+            serviceCollection.AddTransient<IDatesAvailabilityHandler, DatesAvailabilityHandler>();
         }
 
         private static void BindProviders(IServiceCollection serviceCollection)
@@ -84,6 +85,7 @@ namespace TravelAgency.Module
             serviceCollection.AddTransient<IManagerRepository, ManagerRepository>();
             serviceCollection.AddTransient<IClientRepository, ClientRepository>();
             serviceCollection.AddTransient<ISessionRepository, SessionRepository>();
+            serviceCollection.AddTransient<IBookingRepository, BookingRepository>();
             //    serviceCollection.AddTransient<IHotelRepository, HotelRepository>();
             //    serviceCollection.AddTransient<IOrderRepository, OrderRepository>();
             //    serviceCollection.AddTransient<IClientRepository, ClientRepository>();
@@ -99,6 +101,7 @@ namespace TravelAgency.Module
             serviceCollection.AddTransient<ISubscriptionService, SubscriptionService>();
             serviceCollection.AddTransient<IContactService, ContactService>();
             serviceCollection.AddTransient<IAccountService, AccountService>();
+            serviceCollection.AddTransient<IBookingService, BookingService>();
             //    serviceCollection.AddTransient<IHotelService, HotelService>();
             //    serviceCollection.AddTransient<IRoomService, RoomService>();
             //    serviceCollection.AddTransient<IOrderService, OrderService>();

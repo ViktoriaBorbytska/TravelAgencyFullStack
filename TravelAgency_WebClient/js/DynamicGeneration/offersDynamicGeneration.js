@@ -1,13 +1,22 @@
-$(document).ready(function () {
 
+    function generateContent(searchResult) {
 
-    fetch(`${config.apiDomain}/api/offers/getall`)
-        .then(response => response.json())
-        .then((res) => {
-            for (let i = 0; i < 4; i++) {
-                generateOfferCard(res[i]);
+        if (searchResult === undefined) {
+
+            fetch(`${config.apiDomain}/api/offers/getall`)
+                .then(response => response.json())
+                .then((res) => {
+                    for (let i = 0; i < 4; i++) {
+                        generateOfferCard(res[i]);
+                    }
+                });
+        }
+        else {
+            for (let i = 0; i < searchResult.length; i++) {
+                generateOfferCard(searchResult[i]);
             }
-        });
+        }
+    }
 
     function generateOfferCard(response) {
         generateContainer('<div>', 'offers-item clearfix rating_' + response['mark'])
@@ -51,4 +60,3 @@ $(document).ready(function () {
             generateContainer('<span>', 'fa fa-star').appendTo($('div.rating')[response['id']-1]);
         }
     }
-});

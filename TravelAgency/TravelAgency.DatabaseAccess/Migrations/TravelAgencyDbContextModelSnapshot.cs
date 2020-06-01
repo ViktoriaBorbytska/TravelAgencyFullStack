@@ -15,7 +15,7 @@ namespace TravelAgency.DatabaseAccess.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.2.6-servicing-10079")
+                .HasAnnotation("ProductVersion", "2.2.2-servicing-10034")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -221,11 +221,23 @@ namespace TravelAgency.DatabaseAccess.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int>("AdultCount");
+
+                    b.Property<DateTime>("CheckIn");
+
+                    b.Property<DateTime>("CheckOut");
+
+                    b.Property<int>("ChildrenCount");
+
+                    b.Property<int>("ClientId");
+
+                    b.Property<bool>("IsBooked");
+
                     b.Property<int>("ManagerId");
 
                     b.Property<int>("OfferId");
 
-                    b.Property<int>("UserId");
+                    b.Property<int>("Price");
 
                     b.HasKey("Id");
 

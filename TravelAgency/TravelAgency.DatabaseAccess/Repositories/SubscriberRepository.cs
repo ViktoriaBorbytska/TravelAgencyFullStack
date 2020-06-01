@@ -6,6 +6,7 @@ using TravelAgency.DatabaseAccess.Entities;
 using TravelAgency.DatabaseAccess.Interfaces;
 using TravelAgency.Interfaces.DatabaseAccess.Repositories;
 using TravelAgency.Interfaces.Dto;
+using TravelAgency.Interfaces.Dto.Models;
 
 namespace TravelAgency.DatabaseAccess.Repositories
 {
@@ -18,11 +19,24 @@ namespace TravelAgency.DatabaseAccess.Repositories
             this.context = context;
         }
 
-        public async Task<SubscriberData> AddAsycn(string subscriberEmail)
+        public async Task<DefaultResponseModel> AddAsycn(string subscriberEmail)
         {
+            if (context.Subscribers.FirstOrDefault(subscriber => subscriber.Email == subscriberEmail) != null)
+            {
+                return new DefaultResponseModel
+                {
+                    IsSuccessful = false,
+                    Message = "You have already subscribed to the newsletter."
+                };
+            }
             var insertionResult = await context.Subscribers.AddAsync(Map(subscriberEmail));
             context.SaveChanges();
-            return Map(insertionResult.Entity);
+
+            return new DefaultResponseModel
+            {
+                IsSuccessful = true,
+                Message = "You have successfully subscribed to our newsletter. Stay in touch with news and hot offers from all around the world."
+            };
         }
 
         public async Task<IReadOnlyCollection<SubscriberData>> GetAsync()

@@ -1,7 +1,8 @@
-function generateContainer(type, className, text) {
+function generateContainer(type, className, text, id) {
     return $(type, {
         'class': className,
-        'text': text
+        'text': text,
+        'id': id
     });
 }
 
@@ -13,11 +14,12 @@ function generateImg(src, alt, className) {
     });
 }
 
-function generateLink(href, text, className) {
+function generateLink(href, text, className, id) {
     return $('<a>', {
         'href': href,
         'text': text,
-        'class': className
+        'class': className,
+        'id': id !== undefined ? id : ''
     })
 }
 

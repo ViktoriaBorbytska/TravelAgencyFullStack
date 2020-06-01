@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('.btn').click(submitForm);
+    $("#login-button").click(submitForm);
 
     if (localStorage.getItem("jwt") !== null) {
         window.location.href = "index.html";

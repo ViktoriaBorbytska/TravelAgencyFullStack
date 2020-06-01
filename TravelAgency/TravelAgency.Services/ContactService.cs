@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 using TravelAgency.Interfaces.Dto;
 using TravelAgency.Interfaces.Services;
 using TravelAgency.Services.Interfaces.Handlers;
@@ -16,11 +17,11 @@ namespace TravelAgency.Services
             this.mailHandler = mailHandler;
         }
 
-        public void ContactManager(EmailData emailData)
+        public async Task ContactManagerAsync(EmailData emailData)
         {
             string receiver = "manager@gmail.com";
 
-            mailHandler.SendMailAsync(emailData, receiver);
+            await mailHandler.SendMailAsync(emailData, receiver);
         }
     }
 }

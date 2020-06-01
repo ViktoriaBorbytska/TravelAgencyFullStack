@@ -21,9 +21,9 @@ namespace TravelAgency.WebApi.Controllers
 
         [HttpPut]
         [Route("contactmanager")]
-        public IActionResult Contact(EmailData emailData)
+        public async Task<IActionResult> Contact(EmailData emailData)
         {
-            contactService.ContactManager(emailData);
+            await contactService.ContactManagerAsync(emailData);
 
             return Ok();
         }
